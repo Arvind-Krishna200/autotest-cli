@@ -48,3 +48,16 @@ autotest run https://yourapp.com -u admin -p password --deep
 # Show only failures
 autotest run https://yourapp.com -u admin -p password --deep --only-failures
 ​```
+
+## Browser Support
+
+| Browser | Flag | Engine |
+|---------|------|--------|
+| Chrome (default) | `--browser chrome` | Chromium |
+| Firefox | `--browser firefox` | Gecko |
+| Safari | `--browser safari` | WebKit |
+
+First time setup:
+​```bash
+npx playwright install
+​```
