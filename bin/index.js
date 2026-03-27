@@ -15,20 +15,21 @@ program
   .description('Run automated tests on a URL')
   // .option('-u, --username <username>', 'Login username')   // ← commented out
   // .option('-p, --password <password>', 'Login password')   // ← commented out
-  .option('--quick',         'Test main menu items only (~25 sec)')
-  .option('--deep',          'Test main + all sub menu items (~90 sec)')
+  .option('--deep',          'Test all menu items including sub-menus (~90 sec) [default: quick mode ~25 sec]')
   .option('--only-failures', 'Show only failed checks in report')
   .option('--json',          'Output results as JSON instead of terminal log')
   .option('--browser <browser>', 'Browser: chrome, firefox, safari', 'chrome')
+  .option('--export',        'Save report to file (results/ directory)')
   .action(async (url, options) => {
     try {
       await runTests(url, {
         // username:     options.username,   // ← commented out
         // password:     options.password,   // ← commented out
-        quick:        options.quick        || false,
+        quick:        !options.deep,       // ← Default to quick (true), unless --deep specified
         onlyFailures: options.onlyFailures || false,
         json:         options.json         || false,
         browser:      options.browser      || 'chrome',
+        export:       options.export       || false,
       });
     } catch (e) {
       console.log(chalk.red(`\n  ✘  Fatal: ${e.message.split('\n')[0]}`));
