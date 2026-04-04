@@ -1,6 +1,9 @@
-node_modules/
+.autotest-session/
+results/
 .env
-.git
+.env.*
 *.log
-test/
+.DS_Store
+node_modules/
+.git/
 .vscode/

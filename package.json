@@ -1,22 +1,18 @@
 {
   "name": "autotest-cli",
   "version": "1.0.0",
-  "description": "Zero-config automated web app testing CLI",
-  "main": "lib/runner.js",
+  "description": "Zero-config automated web app testing CLI — clicks, crawls, and reports issues on any website",
+  "main": "bin/index.js",
   "bin": {
-    "autotest": "./bin/index.js"
+    "autotest": "bin/index.js"
   },
-  "scripts": {
-    "postinstall": "playwright install chromium"
-  },
-  "keywords": ["testing", "automation", "playwright", "cli", "qa", "e2e", "zero-config"],
-  "author": "ArvindKrishna,AhamedAasik,ChinnaSakthi",
+  "keywords": [
+    "testing", "automation", "cli", "playwright",
+    "web-testing", "qa", "crawler", "e2e"
+  ],
+  "author": "arvind|aasik|sakthi",
   "license": "MIT",
-  "engines": { "node": ">=16.0.0" },
-  "dependencies": {
-    "chalk": "^4.1.2",
-    "commander": "^11.0.0",
-    "ora": "^5.4.1",
-    "playwright": "^1.40.0"
+  "engines": {
+    "node": ">=16"
   }
 }

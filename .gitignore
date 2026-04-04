@@ -1,5 +1,8 @@
-node_modules/
+.autotest-session/
+results/
 .env
+.env.*
 *.log
-.autotest/
-/results/
+.DS_Store
+node_modules/
+.git/

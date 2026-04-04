@@ -1,63 +1,55 @@
-# autotest-cli 🤖
+# autotest-cli
 
-> Zero-config automated web app testing CLI — login, navigation, API monitoring, and security checks in one command.
+Zero-config automated web testing CLI. Point it at any URL — it finds
+every clickable element, tests them all, and reports real issues.
 
-![npm version](https://img.shields.io/npm/v/autotest-cli)
-![license](https://img.shields.io/npm/l/autotest-cli)
-![node](https://img.shields.io/node/v/autotest-cli)
-
----
-
-## What is it?
-
-`autotest-cli` automatically tests your web app by:
-
-- 🔐 Logging in with your credentials
-- 🧭 Clicking every navigation item
-- 📡 Monitoring all API calls (XHR/fetch)
-- 🖼️ Detecting broken images
-- ⚠️ Capturing JavaScript console errors
-- 🛡️ Blocking dangerous clicks (delete, reset, logout)
-- 🌐 Detecting external redirects
-
-No config files. No test scripts. Just point it at your app.
-
----
+No config files. No test scripts. Just run it.
 
 ## Install
 
-```bash
 npm install -g autotest-cli
-
 
 ## Usage
 
-​```bash
-# Basic — no login
 autotest run https://yourapp.com
 
-# With login
-autotest run https://yourapp.com -u admin -p password
+## Options
 
-# Quick mode — main nav only (~25s)
-autotest run https://yourapp.com -u admin -p password --quick
+### Scan Mode
+--basic       Fast scan: buttons, nav, forms only (default, ~15s)
+--thorough    Full scan: all interactive elements (~30s)
 
-# Deep mode — main + sub navigation (~90s)
-autotest run https://yourapp.com -u admin -p password --deep
+### Crawl
+--crawl       Follow navigations and test every page found
+--depth <n>   How deep to crawl (default: 2)
 
-# Show only failures
-autotest run https://yourapp.com -u admin -p password --deep --only-failures
-​```
+### Output
+--flat        Show full numbered interaction flow
+--live        Print each click as it happens
 
-## Browser Support
+### Auth
+--login       Open browser to log in before testing
 
-| Browser | Flag | Engine |
-|---------|------|--------|
-| Chrome (default) | `--browser chrome` | Chromium |
-| Firefox | `--browser firefox` | Gecko |
-| Safari | `--browser safari` | WebKit |
+### Browser
+--browser     for now chrome  | firefox & safari yet to add 
 
-First time setup:
-​```bash
-npx playwright install
-​```
+### Export
+--export      Save report to results/ folder
+--json        Save JSON report to results/ folder
+
+## Examples
+
+# Quick smoke test
+autotest run https://myapp.com
+
+# Full QA with crawl
+autotest run https://myapp.com --thorough --crawl
+
+# Test behind login
+autotest run https://myapp.com --login --thorough --crawl
+
+# CI pipeline
+autotest run https://myapp.com --json
+
+
+## Cloud Dashboard (Coming Soon)
