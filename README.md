@@ -1,4 +1,4 @@
-# dosmoketest-cli
+# dosmoketest
 
 Zero-config automated web testing CLI. Point it at any URL — it finds
 every clickable element, tests them all, and reports real issues.
@@ -7,7 +7,7 @@ No config files. No test scripts. Just run it.
 
 ## Install
 
-npm install -g dosmoketest-cli
+npm install -g dosmoketest
 
 ## Usage
 
