@@ -1,6 +1,6 @@
 {
   "name": "dosmoketest",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Zero-config automated smoke testing CLI for web apps — powered by Playwright",
   "bin": {
     "dosmoketest": "./bin/index.js"

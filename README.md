@@ -1,4 +1,4 @@
-# autotest-cli
+# dosmoketest-cli
 
 Zero-config automated web testing CLI. Point it at any URL — it finds
 every clickable element, tests them all, and reports real issues.
@@ -7,11 +7,11 @@ No config files. No test scripts. Just run it.
 
 ## Install
 
-npm install -g autotest-cli
+npm install -g dosmoketest-cli
 
 ## Usage
 
-autotest run https://yourapp.com
+dosmoketest run https://yourapp.com
 
 ## Options
 
@@ -48,16 +48,16 @@ autotest run https://yourapp.com
 ## Examples
 
 # Quick smoke test
-autotest run https://myapp.com
+dosmoketest run https://myapp.com
 
 # Full QA with crawl
-autotest run https://myapp.com --thorough --crawl
+dosmoketest run https://myapp.com --thorough --crawl
 
 # Test behind login
-autotest run https://myapp.com --login --thorough --crawl
+dosmoketest run https://myapp.com --login --thorough --crawl
 
 # CI pipeline
-autotest run https://myapp.com --json
+dosmoketest run https://myapp.com --json
 
 
 ## Cloud Dashboard (Coming Soon)
