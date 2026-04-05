@@ -1,6 +1,6 @@
 {
   "name": "dosmoketest",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Zero-config automated smoke testing CLI for web apps — powered by Playwright",
   "bin": {
     "dosmoketest": "./bin/index.js"
@@ -10,6 +10,9 @@
     "chalk": "^4.1.2",
     "ora": "^5.4.1",
     "playwright": "^1.40.0"
+  },
+  "scripts": {
+    "postinstall": "playwright install chromium"
   },
   "keywords": [
     "testing",
