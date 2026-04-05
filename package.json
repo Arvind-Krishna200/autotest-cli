@@ -1,18 +1,15 @@
 {
-  "name": "autotest-cli",
+   "name": "dosmoketest",
   "version": "1.0.0",
-  "description": "Zero-config automated web app testing CLI — clicks, crawls, and reports issues on any website",
-  "main": "bin/index.js",
+  "description": "Zero-config automated smoke testing CLI for web apps — powered by Playwright",
   "bin": {
-    "autotest": "bin/index.js"
+    "dosmoketest": "./bin/index.js"
   },
-  "keywords": [
-    "testing", "automation", "cli", "playwright",
-    "web-testing", "qa", "crawler", "e2e"
-  ],
-  "author": "arvind|aasik|sakthi",
+  "keywords": ["testing", "automation", "playwright", "cli", "smoke-test", "e2e"],
   "license": "MIT",
-  "engines": {
-    "node": ">=16"
+  "author": "LowKey_Devs",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourname/autotest-cli"
   }
 }

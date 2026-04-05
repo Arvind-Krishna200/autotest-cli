@@ -37,6 +37,14 @@ autotest run https://yourapp.com
 --export      Save report to results/ folder
 --json        Save JSON report to results/ folder
 
+## Config file (optional)
+--config config.json 
+
+{
+  "blocklist": ["logout", "delete", "#danger-btn"],
+  "clicklist": []
+}
+
 ## Examples
 
 # Quick smoke test
