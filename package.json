@@ -1,15 +1,17 @@
 {
-   "name": "dosmoketest",
-  "version": "1.0.0",
+  "name": "dosmoketest",
+  "version": "1.0.1",
   "description": "Zero-config automated smoke testing CLI for web apps — powered by Playwright",
   "bin": {
     "dosmoketest": "./bin/index.js"
   },
+  "dependencies": {
+    "commander": "^12.1.0",
+    "chalk": "^4.1.2",
+    "ora": "^5.4.1",
+    "playwright": "^1.40.0"
+  },
   "keywords": ["testing", "automation", "playwright", "cli", "smoke-test", "e2e"],
   "license": "MIT",
-  "author": "LowKey_Devs",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/yourname/autotest-cli"
-  }
+  "author": "LowKey_Devs"
 }
